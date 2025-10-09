@@ -1,0 +1,318 @@
+html,
+body {
+
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* stack boxes vertically */
+  align-items: center;
+  flex: 1;
+  /* take available vertical space */
+  overflow-y: auto;
+  /* enable vertical scrolling */
+  padding: 1rem 0;
+  width: 100%;
+}
+
+body {
+  background-color: #E4D8C1;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Background image + vignette */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* shorthand for top:0, right:0, bottom:0, left:0 */
+  background: url("../img/warrior-span.JPG") no-repeat center center / cover;
+  box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.9);
+  z-index: -1;
+  /* push behind everything */
+  height: 100%;
+}
+
+body.about-page::before {
+  background: url("../img/victory-span.JPG") no-repeat center center / cover;
+}
+
+/* 📄 About Page */
+body.team-page::before {
+  background: url("../img/cabin-span.JPG") no-repeat center center / cover;
+}
+
+/* ✉️ Contact Page */
+body.contact-page::before {
+  background: url("../img/boat-span.JPG") no-repeat center center / cover;
+}
+
+/* Header */
+header {
+  background: rgba(228, 216, 193, 0.9);
+  padding: 1rem;
+  text-align: center;
+}
+
+.img-logo {
+  width: 100px;
+  vertical-align: middle;
+}
+
+.text-logo {
+  font-family: Copperplate Gothic, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #303d39;
+  margin-left: 0.5em;
+}
+
+/* Nav */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.nav-link a {
+  color: #303d39;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+.nav-link a:hover {
+  color: #5f7770;
+}
+
+/* content box */
+.content-box {
+  background-color: rgba(228, 216, 193, 0.9);
+  width: 90%;
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.content-media {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+/* Footer (sticks to bottom after content) */
+footer {
+  background: #E4D8C1;
+  color: #303d39;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  /* pushes footer to bottom if page is short */
+
+
+}
+
+.content-title {
+  text-align: center;
+  font-family: Copperplate Gothic;
+  font-weight: 900;
+  font-size: 2em;
+  color: #303d39;
+}
+
+.content-img {
+
+  max-width: 100%;
+  height: auto;
+
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+
+}
+
+.content-details {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  /* breathing room between text and image */
+  align-items: flex-start;
+  font-size: 1.15rem;
+}
+
+/* Image sizing */
+.content-details img {
+  flex: 1 1 300px;
+  /* grows, shrinks, but won’t go smaller than ~300px */
+  max-width: 100%;
+  /* on desktop */
+  height: auto;
+}
+
+/* 📱 Mobile override */
+@media (max-width: 768px) {
+  body {
+    background-color: #E4D8C1;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+  }
+
+  .content-box{
+    width: 80%;
+
+  }
+
+  .content-media {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .content-details {
+    flex-direction: column;
+    /* stack text + image */
+    text-align: center;
+  }
+
+  .content-details img {
+    max-width: 100%;
+    /* take full width on mobile */
+    margin: 1rem auto;
+  }
+
+  .nav-link a {
+    color: #303d39;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+
+  .content-text,
+  .content-media {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.bold-text {
+  font-weight: 600;
+  display: inline;
+}
+
+.motto-text {
+  margin-top: 3%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.2em;
+  font-family: Copperplate Gothic;
+  color: #303d39;
+}
+
+.content-text {
+  flex: 2 1 60%;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background-color: #e4e1db;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 1.8rem;
+  color: #303d39;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contact-section p {
+  text-align: center;
+  color: #303d39;
+  margin-bottom: 25px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #303d39;
+}
+
+input,
+textarea {
+  margin-bottom: 20px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #66a07a;
+  box-shadow: 0 0 0 3px rgba(102, 160, 122, 0.2);
+}
+
+/* Button */
+button {
+  background-color: #303d39;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #83a49a;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.contact-text {
+  font-size: 1.5rem;
+  text-align: center8;
+}
