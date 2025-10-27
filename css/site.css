@@ -13,6 +13,7 @@ body {
   flex-direction: column;
 }
 
+
 .top-page-hr{
     margin-top: 4px;
 }
@@ -69,6 +70,10 @@ hr {
     margin: 0;
     color:  #D4C69A;
     border-color: #D4C69A;
+}
+
+.mobile-hr {
+  display: none;
 }
 
 .fade-box-top {
@@ -167,7 +172,7 @@ hr {
   overflow-y: scroll;
   scrollbar-color: #D4C69A #3e3b24;
   scrollbar-width: thin;
-  max-height: 43rem;
+  max-height: 35em;
 }
 
 /* content box */
@@ -180,6 +185,7 @@ hr {
   font-size: 1.2rem;
   border-radius: 0.5rem;
   flex-wrap: wrap;
+  box-shadow: 0px 10px 10px #1c1c1c;
 }
 
 .content-title {
@@ -207,8 +213,9 @@ hr {
   flex-direction: row;
   gap: 2rem;
   /* breathing room between text and image */
-  align-items: flex-start;
+  align-items:center;
   font-size: 1.15rem;
+  vertical-align: middle;
 }
 
 /* Image sizing */
@@ -218,12 +225,20 @@ hr {
   max-width: 100%;
   /* on desktop */
   height: auto;
+  vertical-align: middle;
+  
 }
 
 .content-media {
   flex: 1 1 100%;
   display: flex;
   justify-content: center;
+  
+}
+
+.content-text {
+  font-size: 1.3rem;
+
 }
 
 .main-page-socials {
@@ -301,6 +316,8 @@ footer {
 form {
   display: flex;
   flex-direction: column;
+  
+  
 }
 
 label {
@@ -350,4 +367,80 @@ button:active {
 .contact-text {
   font-size: 1.5rem;
   text-align: center8;
+}
+
+@media only screen and (max-width: 844px)
+{
+.body{
+  width: 100%;
+}
+
+.header-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-logo{
+ min-width: 100%; 
+}
+
+.nav-link, a{
+ font-size: 1.4rem; 
+}
+
+nav {
+  min-width: 100%;
+}
+
+.hero-title{
+  font-size: 3rem;
+}
+
+.hero-subtitle{
+  font-size: 1.5rem;
+}
+
+.hero{
+  max-height: 60%;
+}
+
+.content-box {
+  width: 80%;
+}
+
+.news-section {
+  min-height: 95%;
+}
+
+.content-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.content-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-text {
+  width: 100%;
+}
+
+.content-img {
+  min-width: 80%;
+  padding-bottom: 10px;
+}
+
+.content-title{
+  font-size: 1.8rem;
+}
+
+.mobile-hr {
+  display: block;
+  width: 100%;
+}
+
 }
