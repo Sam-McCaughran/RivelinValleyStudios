@@ -206,8 +206,9 @@ hr {
   scrollbar-width: thin;
   height: 75vh;
   overflow-x: hidden;
-  width: 75%;
-
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  display: block;
 }
 
 .content-box {
