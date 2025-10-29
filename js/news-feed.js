@@ -48,7 +48,6 @@ function initNewsFeed() {
 
 window.addEventListener('DOMContentLoaded', initNewsFeed);
 window.addEventListener('pageshow', (event) => {
-  // 'pageshow' fires on both reload and bfcache restores
   if (event.persisted) {
     initNewsFeed();
   }

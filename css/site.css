@@ -206,9 +206,10 @@ hr {
   scrollbar-width: thin;
   height: 75vh;
   overflow-x: hidden;
-  width: min(100%, 1000px);
+  width: 80%;
   margin: 0 auto;
   display: block;
+
 }
 
 .content-box {
@@ -480,6 +481,7 @@ nav {
   min-height: 85vh;
   max-height: 85vh;
   overflow: hidden;
+  justify-items: center;
 }
 
 .content-box{
