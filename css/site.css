@@ -179,9 +179,11 @@ hr {
 }
 
 .news-section {
+  min-width: 100%;
   min-height: 85vh;
   max-height: 85vh;
   overflow: hidden;
+  justify-items: center;
 }
 
 .news-section-header {
@@ -191,7 +193,7 @@ hr {
     font-size: 2.5em;
     color: #D4C69A;
     text-shadow: 1px 1px 2px black;
-    width: 100%;
+    min-width: 100%;
     align-content: center;
     display: block;
     margin-bottom: 10px;
@@ -199,11 +201,12 @@ hr {
 
 .news-feed
 {
-  width: 100%;
   overflow-y: scroll;
   scrollbar-color: #D4C69A #3e3b24;
   scrollbar-width: thin;
   height: 75vh;
+  overflow-x: hidden;
+  width: 75%;
 
 }
 
@@ -472,8 +475,10 @@ nav {
 }
 
 .news-section {
-  min-height: 95%;
-  min-width: 100vw;
+  min-width: 100%;
+  min-height: 85vh;
+  max-height: 85vh;
+  overflow: hidden;
 }
 
 .content-box{
@@ -543,14 +548,7 @@ nav {
   transform: translate(-50%, -10%) scaleY(0);
 }
 
-.site-main-content,
-.container,
-.news-section,
-.news-feed {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
+
 
 
 
