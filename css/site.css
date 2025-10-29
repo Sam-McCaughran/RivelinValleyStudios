@@ -91,13 +91,14 @@ hr {
 .container {
   display: flex;
   flex: 1;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
-  overflow-y: auto;
+  overflow-y: visible;
   width: 100%;
+
 }
 
 .hero {
@@ -154,6 +155,12 @@ hr {
   z-index: 1;
 }
 
+.news-section {
+  min-height: 85vh;
+  max-height: 85vh;
+  overflow: hidden;
+}
+
 .news-section-header {
     text-align: center;
     font-family: Copperplate Gothic;
@@ -173,7 +180,8 @@ hr {
   overflow-y: scroll;
   scrollbar-color: #D4C69A #3e3b24;
   scrollbar-width: thin;
-  max-height: 35em;
+  height: 75vh;
+
 }
 
 /* content box */
@@ -243,7 +251,7 @@ hr {
 }
 
 .main-page-socials {
-    min-height: 10%;
+    min-height: 10vh;
     color: black;
     background-color: #D4C69A;
     width: 100%;
