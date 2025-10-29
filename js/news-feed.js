@@ -42,4 +42,15 @@ async function loadNewsFeed(jsonPath = './json/news.json', containerSelector = '
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => loadNewsFeed());
+function initNewsFeed() {
+  loadNewsFeed();
+}
+
+window.addEventListener('DOMContentLoaded', initNewsFeed);
+window.addEventListener('pageshow', (event) => {
+  // 'pageshow' fires on both reload and bfcache restores
+  if (event.persisted) {
+    initNewsFeed();
+  }
+});
+
