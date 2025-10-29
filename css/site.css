@@ -472,6 +472,7 @@ nav {
 
 .news-section {
   min-height: 95%;
+  min-width: 100%;
 }
 
 .content-box{
