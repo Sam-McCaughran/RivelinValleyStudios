@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -472,7 +473,7 @@ nav {
 
 .news-section {
   min-height: 95%;
-  min-width: 100%;
+  min-width: 100vw;
 }
 
 .content-box{
@@ -540,6 +541,15 @@ nav {
 
 .dropdown-nav {
   transform: translate(-50%, -10%) scaleY(0);
+}
+
+.site-main-content,
+.container,
+.news-section,
+.news-feed {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 
