@@ -288,10 +288,11 @@ hr {
     min-height: 10vh;
     color: black;
     background-color: #D4C69A;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     background: linear-gradient(0deg, #D4C69A, #3e3b24);
     justify-items: center;
+    align-items: center;
     overflow-x: hidden;
 }
 
@@ -305,9 +306,10 @@ hr {
   text-decoration: none;
   padding: 0;
   margin: 0;
-  align-items: center;
-  gap: 7.5em;
   padding-top: 1em;
+  justify-content: center;
+  gap: 15rem;
+  width: 100%;
 }
 
 .social-link-item {
